@@ -1,0 +1,579 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+
+    color:white;
+
+}
+
+
+
+
+
+#barra{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    height:5px;
+
+    width:0%;
+
+    background:#00e5ff;
+
+    z-index:5000;
+
+}
+
+
+
+
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:120px;
+
+    background:rgba(15,23,42,.96);
+
+    backdrop-filter:blur(12px);
+
+    z-index:3000;
+
+    text-align:center;
+
+    border-bottom:1px solid #00e5ff;
+
+}
+
+
+
+header h1{
+
+    margin-top:20px;
+
+    color:#00e5ff;
+
+    font-size:clamp(2rem,4vw,3rem);
+
+}
+
+
+
+header p{
+
+    margin-top:8px;
+
+}
+
+
+
+
+
+
+nav{
+
+    position:fixed;
+
+    top:140px;
+
+    left:20px;
+
+    width:220px;
+
+    height:calc(100vh - 160px);
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+nav a{
+
+    flex-shrink:0;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:15px;
+
+    border:2px solid #00e5ff;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:rgba(15,23,42,.8);
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    background:#00e5ff;
+
+    color:black;
+
+}
+
+
+
+
+
+
+
+
+.hero{
+
+    min-height:100vh;
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:150px 60px 80px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+
+
+
+
+.hero h2{
+
+    color:#00e5ff;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    margin-bottom:25px;
+
+    text-shadow:0 0 20px rgba(0,229,255,.5);
+
+}
+
+
+
+
+
+.hero p{
+
+    max-width:850px;
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+
+    color:white;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+
+
+.boton{
+
+    display:inline-block;
+
+    padding:16px 45px;
+
+    background:#00e5ff;
+
+    color:#0f172a;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-size:1.1rem;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    transition:.35s;
+
+    border:2px solid #00e5ff;
+
+    box-shadow:0 0 20px rgba(0,229,255,.4);
+
+}
+
+
+
+.boton:hover{
+
+    background:transparent;
+
+    color:#00e5ff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 35px rgba(0,229,255,.8);
+
+}
+
+
+
+
+
+
+.contenido{
+
+
+    width:calc(100% - 260px);
+
+
+    margin-left:260px;
+
+
+    padding:80px 60px;
+
+
+}
+
+
+
+
+
+.contenido h2{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+    color:#00e5ff;
+
+
+    font-size:3rem;
+
+
+    margin-bottom:50px;
+
+
+}
+
+
+
+
+
+
+
+
+.card{
+
+
+    width:100%;
+
+
+    margin:0 auto 35px;
+
+
+    padding:35px;
+
+
+    background:rgba(255,255,255,.09);
+
+
+    border:1px solid rgba(255,255,255,.25);
+
+
+    border-radius:22px;
+
+
+    backdrop-filter:blur(10px);
+
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+    transition:.7s;
+
+
+}
+
+
+
+
+.card.visible{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+
+
+
+.card h3{
+
+
+    text-align:center;
+
+
+    color:#00e5ff;
+
+
+    font-size:1.9rem;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.card p{
+
+
+    width:100%;
+
+
+    text-align:justify;
+
+
+    font-size:1.15rem;
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+.card ul{
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+
+
+.imagen-contenedor{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.imagen-contenedor img{
+
+
+    width:100%;
+
+
+    max-width:800px;
+
+
+    border-radius:15px;
+
+
+    border:3px solid #00e5ff;
+
+
+}
+
+
+
+
+
+.espacio-imagen{
+
+
+    width:100%;
+
+
+    height:300px;
+
+
+    border:2px dashed #00e5ff;
+
+
+    border-radius:15px;
+
+
+    margin:25px auto;
+
+
+}
+
+
+
+
+
+
+
+
+footer{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+    padding:30px;
+
+
+    background:black;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:900px){
+
+
+
+header{
+
+    height:110px;
+
+}
+
+
+
+nav{
+
+
+    position:relative;
+
+
+    top:120px;
+
+
+    width:100%;
+
+
+    height:auto;
+
+
+    left:0;
+
+
+    padding:20px;
+
+
+}
+
+
+
+.contenido{
+
+
+    width:100%;
+
+
+    margin-left:0;
+
+
+    padding:50px 20px;
+
+
+}
+
+
+
+.hero{
+
+
+    padding:130px 20px;
+
+
+}
+
+
+
+.hero h2{
+
+
+    font-size:3rem;
+
+
+}
+
+
+
+}
